@@ -3,7 +3,7 @@ from playwright.async_api import async_playwright, expect
 
 async def run() -> None:
     async with async_playwright() as p:
-        browser = await p.chromium.launch(headless=False)        # show the browser
+        browser = await p.chromium.launch(headless=True)        # show the browser
         page = await browser.new_page()
 
         # 1️.  open the login page
